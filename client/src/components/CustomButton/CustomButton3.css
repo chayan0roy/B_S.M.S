@@ -1,0 +1,48 @@
+.LeftArrow {
+    transform: rotate(90deg);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.RightArrow {
+    transform: rotate(-90deg);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.LeftArrow span,
+.RightArrow span {
+    display: block;
+    border-bottom: 5px solid blue;
+    border-right: 5px solid blue;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate1 2s infinite;
+}
+
+.LeftArrow span:nth-child(2),
+.RightArrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.LeftArrow span:nth-child(3),
+.RightArrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate1 {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}

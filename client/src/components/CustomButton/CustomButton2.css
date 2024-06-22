@@ -1,0 +1,121 @@
+.customButton2 {
+    position: relative;
+    font-size: 10px;
+    color: var(--color);
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.customButton2:hover {
+    color: black;
+    box-shadow: 0 0 0px var(--color);
+    font-weight: bold;
+}
+
+.customButton2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color);
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.customButton2:hover::before {
+    transform: scale(1);
+    transition-delay: 0.5s;
+    box-shadow: 0 0 10px var(--color), 0 0 30px var(--color),
+        0 0 60px var(--color);
+}
+
+.customButton2 span {
+    position: absolute;
+    background: var(--color);
+    pointer-events: none;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--color), 0 0 20px var(--color),
+        0 0 30px var(--color), 0 0 50px var(--color), 0 0 100px var(--color);
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.25s;
+}
+
+.customButton2:hover span {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.customButton2 span:nth-child(1),
+.customButton2 span:nth-child(3) {
+    width: 20px;
+    height: 3px;
+}
+
+.customButton2:hover span:nth-child(1),
+.customButton2:hover span:nth-child(3) {
+    transform: translateX(0);
+}
+
+.customButton2 span:nth-child(2),
+.customButton2 span:nth-child(4) {
+    width: 3px;
+    height: 20px;
+}
+
+.customButton2:hover span:nth-child(1),
+.customButton2:hover span:nth-child(3) {
+    transform: translateY(0);
+}
+
+.customButton2 span:nth-child(1) {
+    top: calc(50% - 2px);
+    left: -30px;
+    transform-origin: left;
+}
+
+.customButton2:hover span:nth-child(1) {
+    left: 50%;
+}
+
+.customButton2 span:nth-child(3) {
+    top: calc(50% - 2px);
+    right: -30px;
+    transform-origin: right;
+}
+
+.customButton2:hover span:nth-child(3) {
+    right: 50%;
+}
+
+.customButton2 span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: -30px;
+    transform-origin: top;
+}
+
+.customButton2:hover span:nth-child(2) {
+    top: 50%;
+}
+
+.customButton2 span:nth-child(4) {
+    left: calc(50% - 2px);
+    bottom: -30px;
+    transform-origin: bottom;
+}
+
+.customButton2:hover span:nth-child(4) {
+    bottom: 50%;
+}

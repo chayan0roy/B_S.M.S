@@ -1,0 +1,36 @@
+.form-group {
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: blue;
+}
+
+.form-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0 3px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: top 0.3s, font-size 0.3s;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: 0;
+    font-weight: 400;
+    font-size: 13px;
+}
